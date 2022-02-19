@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+header {
+  margin: 30px 0;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+header .container .logo img {
+  width: 50px;
+  cursor: pointer;
+}
+header .container .pages {
+}
+header .container .pages ul li {
+  list-style: none;
+  display: inline-block;
+}
+header .container .pages li a {
+  margin-right: 30px;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+header .container .pages .mine-menu {
+  width: 30px;
+  visibility: hidden;
+  position: absolute;
+}
+header .container .pages li a:hover {
+  color: red;
+  transition: 0.3s;
+}
+/* Start content */
+.content {
+}
+.content .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .container .left {
+  position: relative;
+  margin: 200px 0;
+}
+.content .container .row {
+  width: 15px;
+  height: 300px;
+  background: linear-gradient(to right, #fb5283, #ff3527);
+}
+.content .container .left h2 {
+  font-size: 54px;
+}
+.content .container .left p {
+  font-size: 30px;
+  color: #707070;
+  font-weight: 100;
+  margin: 20px 0 10px;
+}
+.content .container .left p:last-of-type {
+  font-size: 16px;
+  color: #b7b7b7;
+  font-weight: 100;
+}
+.content .container .left h4 {
+  font-size: 20px;
+  margin: 30px 0;
+  font-weight: 800;
+}
+.content .container .left .buy {
+  width: 140px;
+  border: 0;
+  border-radius: 6px;
+  outline: none;
+  padding: 12px 10px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(to right, #fb5283, #ff3527);
+  transition: 0.5s;
+}
+.content .container .left .buy img {
+  width: 30px;
+}
+.content .container .left .buy:hover img {
+  display: block;
+}
+.content .container .left .buy:hover {
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .container .left::before {
+  content: "";
+  width: 10px;
+  height: 50%;
+  background: linear-gradient(to right, #ff469f, #ff6062);
+  position: absolute;
+  left: -30px;
+}
+/* right */
+.content .container .right {
+}
+.content .container .right .box {
+  width: 45%;
+  height: 57%;
+  position: absolute;
+  right: 0%;
+  top: 20%;
+  z-index: -11;
+  background: linear-gradient(to right, #ff469f, #ff6062);
+  border-radius: 20px 0 0 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 45px;
+}
+.content .container .right .controller {
+  width: 85%;
+}
+.content .container .right .box .add-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  width: 100px;
+  cursor: pointer;
+}
+.content .container .right .add-btn img {
+  width: 35px;
+}
+.content .container .right .add-btn p {
+}
+/* Footer */
+footer .container .contact {
+  display: flex;
+  justify-content: center;
+}
+
+footer .container .contact img {
+  height: 13px;
+  padding-left: 30px;
+}
+
+@media (max-width: 1200px) {
+  .content .container .left h2 {
+    font-size: 25px;
+  }
+  .content .container .left p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .content .container .left {
+    margin: 50px 0;
+  }
+  .content .container .right {
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content .container .right .controller {
+    width: 85%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: -112;
+  }
+  .content .container .left p {
+    font-size: 18px;
+    color: gray;
+  }
+  header .container .pages .mine-menu:hover + ul {
+    visibility: visible;
+  }
+  header .container .pages .mine-menu {
+    visibility: visible;
+    position: relative;
+    left: 80%;
+  }
+  header .container .pages ul {
+    visibility: hidden;
+    padding: 10px 0px;
+    width: 100%;
+  }
+  header .container .pages ul li {
+    display: flex;
+  }
+  header .container .pages li a {
+    margin: 0;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 300px) {
+  .content .container .left {
+    margin: 60px 0;
+  }
+  .content .container .right .box {
+    width: 55%;
+  }
+}
